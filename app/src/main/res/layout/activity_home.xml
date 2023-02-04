@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -38,7 +38,7 @@
 
 
                 <SearchView
-                    android:id="@+id/search_view"
+                    android:id="@+id/searchView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/search_fundo"
@@ -50,7 +50,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_main_category"
+                android:id="@+id/rvMainCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -59,17 +59,17 @@
                 tools:listitem="@layout/item_rv_main_category" />
 
             <TextView
+                android:id="@+id/tvCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gilroy_bold"
                 android:paddingStart="10dp"
-                android:text="Category name"
-                android:id="@+id/tvCategory"
+                android:text="Nome da Categoria"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_sub_category"
+                android:id="@+id/rvSubCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -83,4 +83,4 @@
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
