@@ -8,12 +8,12 @@
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
         app:cardBackgroundColor="@color/yellow"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp">
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_5sdp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -21,9 +21,9 @@
 
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:id="@+id/imgDish"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:id="@+id/img_dish"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="-20dp"
@@ -31,18 +31,18 @@
                 android:src="@drawable/cat_img"/>
 
             <TextView
-                android:id="@+id/tvDishName"
+                android:id="@+id/tv_dish_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nome Prato"
-                android:textSize="11sp"
+                android:text="Dish Name"
+                android:textSize="@dimen/_11ssp"
                 android:textColor="@color/white"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:maxEms="10"
                 android:maxLines="2"
                 android:fontFamily="@font/gilroy_bold"
-                android:padding="10dp"/>
+                android:padding="@dimen/_10sdp"/>
         </RelativeLayout>
 
 
