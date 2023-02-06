@@ -37,6 +37,7 @@ class HomeActivity : BaseActivity() {
         //setando os tratadores de eventos
         arrCategoriesAdapter.setClickListener(onClicked)
         arrMealsAdapter.setClickListener(onClickedSubItem)
+        arrFavoritesAdapter.setClickListener(onClickedSubItem)
 
         searchView = findViewById(R.id.idSV)
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
