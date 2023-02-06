@@ -1,6 +1,7 @@
 package com.example.recipeapp
 
 
+import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -33,6 +34,7 @@ class DetailActivity : BaseActivity() {
             var intent = Intent(this@DetailActivity, HomeActivity::class.java)
             startActivity(intent)
             finish()
+            overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left)
         }
 
         //ir ao link do youtube
@@ -48,7 +50,14 @@ class DetailActivity : BaseActivity() {
                 this.let {
                     val meal = RecipeDatabase.getDatabase(this@DetailActivity).recipeDao().getSpecificMeal(id)
                     if (meal != null) {
-                        meal.isFavorite = true
+                        if(meal.isFavorite){
+                            meal.isFavorite = false
+                            Toast.makeText(this@DetailActivity, "Prato removido dos favoritos", Toast.LENGTH_SHORT).show()
+                        }
+                        else{
+                            meal.isFavorite = true
+                            Toast.makeText(this@DetailActivity, "Prato adicionado aos favoritos", Toast.LENGTH_SHORT).show()
+                        }
                         RecipeDatabase.getDatabase(this@DetailActivity).recipeDao().updateMeal(meal)
                     }
                 }
