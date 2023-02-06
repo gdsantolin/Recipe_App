@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SplashActivity">
+    tools:context=".StartActivity">
 
 
     <ScrollView
@@ -38,10 +38,10 @@
 
 
                 <SearchView
-                    android:id="@+id/search_view"
+                    android:id="@+id/idSV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/search_bg"
+                    android:background="@drawable/background_busca"
                     android:iconifiedByDefault="false"
                     android:queryBackground="@color/transparent"
                     android:queryHint="Search for recipes"
@@ -50,13 +50,13 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_main_category"
+                android:id="@+id/rv_categories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
                 android:orientation="horizontal"
                 tools:itemCount="1"
-                tools:listitem="@layout/item_rv_main_category" />
+                tools:listitem="@layout/item_rv_categories" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -69,13 +69,32 @@
                 android:textSize="@dimen/_15ssp" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_sub_category"
+                android:id="@+id/rv_meals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
                 android:orientation="horizontal"
                 tools:itemCount="1"
-                tools:listitem="@layout/item_rv_sub_category" />
+                tools:listitem="@layout/item_rv_meals" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_bold"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="Favorite Recipes"
+                android:id="@+id/tvFavorites"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_favorites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_rv_meals" />
 
 
         </LinearLayout>
