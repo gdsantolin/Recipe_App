@@ -1,3 +1,3 @@
 # Recipe_App
 
-Um aplicativo para a disciplina de Paradigma de Programação. Um breve estudos sobre as caracteristicas da linguagem de programação Kotlin no desenvolvimento de um aplicativo de Receitas
+Aplicativo desenvolvido para a disciplina de Paradigmas de Programação. Um breve estudo sobre as características da linguagem Kotlin no desenvolvimento de um aplicativo de Receitas.
